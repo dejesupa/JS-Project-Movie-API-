@@ -91,7 +91,7 @@ nav {
 }
 
 
-h1 {
+.title {
     font-weight: 500;
     letter-spacing: 2px;
     text-align: center;
@@ -99,5 +99,17 @@ h1 {
     font-size: 45px;
     max-width: 1000px;
     margin-bottom: 40px;
-    color: #fff;
+     color: #6030b1;
+}
+
+input {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
 }
