@@ -1,0 +1,1 @@
+//API: "https://www.omdbapi.com/?apikey=c24b97b7&s=fast"
