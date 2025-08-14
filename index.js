@@ -5,7 +5,7 @@ function renderMovie() {
 
     const movie = getMovies();
 
-   const movieHtml = movie.map(movie => {
+    const movieHtml = movie.map(movie => {
         return `<div class="movie">
             <figure class="movie__img--wrapper">
                 <img class="movie__img" src="${movie.Poster}" alt="">
@@ -17,11 +17,10 @@ function renderMovie() {
                 ${movie.Year}
             </div>
         </div>`;
-    });
+    }).join("");
 
+    console.log(movieHtml)
     movieWrapper.innerHTML = movieHtml;
-    console.log(movieHtml);
-    
 
     
 }
