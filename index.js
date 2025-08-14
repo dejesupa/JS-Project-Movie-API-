@@ -1,9 +1,21 @@
 //API: "https://www.omdbapi.com/?apikey=c24b97b7&s=fast"
 
-function renderMovie() {
-    const movieWrapper = document.querySelector(".movie");
+function renderMovie(filter) {
+    const movieWrapper = document.querySelector(".movie__results");
 
     const movie = getMovies();
+
+    if (filter === 'RECENT') {
+        movie.sort((a, b) => (b.Year) - (a.Year));
+    }
+
+    else if (filter === 'OLDEST_TO_NEWEST') {
+        movie.sort((a, b) => (a.Year) - (b.Year));
+    }
+}
+
+
+
 
     const movieHtml = movie.map(movie => {
         return `<div class="movie">
@@ -19,11 +31,14 @@ function renderMovie() {
         </div>`;
     }).join("");
 
-    console.log(movieHtml)
-    movieWrapper.innerHTML = movieHtml;
+    movieWrapper.innerHTML = movieHtml;    
 
-    
-}
+
+function filterMovies(event) {
+        renderMovie(event.target.value);
+    }
+
+
 setTimeout(() => {
     renderMovie();
 });

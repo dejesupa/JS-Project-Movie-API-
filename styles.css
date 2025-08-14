@@ -140,12 +140,6 @@ input {
     padding-top: 28px;
 }
 
-.search__img {
-    /* position: absolute; */
- 
-    /* left: 50; */
-
-}
 
 
 /*
@@ -197,4 +191,8 @@ SEARCH
 .movie__year {
     font-size: 16px;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
