@@ -3,6 +3,8 @@
 const movieWrapper = document.querySelector(".movie__results");
 const searchName = document.querySelector(".search__results");
 
+movieWrapper.classList += ' books__loading'
+
 // GLOBAL MOVIES VARIABLE
 let currentMovies = []
 

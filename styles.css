@@ -7,6 +7,7 @@ box-sizing: border-box;
 font-family: "Open Sans", sans-serif;
 }
 
+
 .container {
     padding: 80px 0;
 }
@@ -33,7 +34,7 @@ bottom: -3px;
 height: 3px;
 width: 0;
 right: 0;
-background-color: rgb(96, 48, 177);
+background-color: rgb(235, 236, 238);
 transition: all 300ms ease;
 }
 
@@ -49,6 +50,13 @@ NAVIGATION
 
 */
 
+#landing-page {
+    background-image: url("https://t3.ftcdn.net/jpg/15/30/17/40/240_F_1530174068_fQ37Shr5UmtwsIDDW6KXUlhdM6QxorQ6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -60,8 +68,11 @@ nav {
 }
 
 .nav__logo {
+    width: 80px;
     height: 80px;
-    width: 160px;
+    border-radius: 50%;
+    padding: 12px;
+    
 }
 
 .nav__link--list {
@@ -70,33 +81,32 @@ nav {
 }
 
 .nav__link {
-    margin: 0 12px;
+    margin: 0 28px;
 }
 
 .nav__link--anchor {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-    color: rgb(10, 31, 68);
+    color: rgb(235, 236, 238);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn {
-    color: #6030b1;
+    color: #201d24;
     cursor: pointer;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
-    padding: 12px 40px;
+    padding: 10px 28px;
     border-width: 2px;
-    border-style: initial;
-    border-color: rgb(93, 62, 255);
-    border-image: initial;
-    border-radius: 50px;
+    border-radius: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .btn:hover {
     color: white;
-    background-color: #ff328f;
+    background-color: #6b6c7400;
     transition: all 300ms ease;
 }
 
@@ -117,7 +127,8 @@ header {
     font-size: 45px;
     max-width: 1000px;
     margin-bottom: 40px;
-     color: #6030b1;
+     color: white;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 input {
@@ -136,11 +147,18 @@ input {
 }
 
 .input__wrapper {
-    display: flex;
     padding-top: 28px;
 }
 
-
+.search__btn {
+    color: #201d24;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 12px 16px;
+    border-style: initial;
+    border-radius: 50%;
+}
 
 /*
 
@@ -149,7 +167,7 @@ SEARCH
 */
 
 .search__container {
-    padding-top: 0;
+    padding-top: 32px;
 }
 
 .search__header {
@@ -166,7 +184,11 @@ SEARCH
 
 .title__search {
     font-size: 32px;
-     color: #6030b1;
+     color: black;
+}
+
+.search__results {
+    color: grey;
 }
 
 .movie__results {
@@ -193,3 +215,32 @@ SEARCH
     text-align: center;
 }
 
+.movies__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+    color: black;
+}
+
+.books__loading--spinner {
+    display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+    display: block !important;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform:rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
