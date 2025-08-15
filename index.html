@@ -36,11 +36,10 @@
                 <header class="title">
                     <h1>Browse Our Movies</h1>
                     <div class="input__wrapper">
-                        <input type="text" id="search__Input" placeholder="Search by Title, Year or Keyword">
+                        <input type="text" id="search__Input" placeholder="Search by Title, Year or Keyword" onchange="searchChange(event)">
                             <button class="search__btn">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <div id="results__container"></div>
                        
                     </div>
                     
@@ -54,13 +53,15 @@
             <div class="row">
                 <div class="search__header">
                 <div class="search__title">
-                    <h1 class="title__search">Search Results</h1>
+                    <h1 class="title__search">Search Results
+                        <span class="search__results"></span>
+                    </h1>
                 </div>
 
-                <select id="filter" onchange="filterMovies(event)">
+                <select id="filter" onchange="sortChange(event)">
                     <option value="" disabled selected>Sort</option>
-                    <option value="RECENT">Most Recent</option>
-                    <option value="OLDEST_TO_NEWEST">Oldest</option>
+                    <option value="Newest">Newest to Oldest</option>
+                    <option value="Oldest">Oldest to Newest</option>
                 </select>
                 </div>
 
